@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLO Course Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>MLO Course Practice Center</h1>
+      <p>
+        Train with topic quizzes, simulate exams, and complete the final readiness
+        test.
+      </p>
+    </header>
+
+    <main class="layout">
+      <aside class="panel">
+        <h2>Learning Tracks</h2>
+        <button class="track-btn active" data-track="quiz">Practice Quizzes</button>
+        <button class="track-btn" data-track="exam">Mock Exams</button>
+        <button class="track-btn" data-track="final">Final Test</button>
+
+        <div class="stats">
+          <h3>Your Progress</h3>
+          <p id="attempts">Attempts: 0</p>
+          <p id="best-score">Best Score: 0%</p>
+          <p id="last-score">Last Score: -</p>
+        </div>
+      </aside>
+
+      <section class="panel quiz-panel">
+        <h2 id="section-title">Practice Quizzes</h2>
+        <p id="section-description">
+          Quick questions to reinforce core MLO concepts.
+        </p>
+
+        <form id="question-form"></form>
+
+        <div class="actions">
+          <button id="submit-btn" type="button">Submit Answers</button>
+          <button id="retry-btn" type="button" class="secondary" disabled>Try Again</button>
+        </div>
+
+        <section id="result" class="result" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <footer>
+      <small>Built for MLO learners · Practice consistently for exam success.</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
